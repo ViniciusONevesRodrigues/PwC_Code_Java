@@ -1,6 +1,7 @@
-import org.junit.*;
-
+package br.com.pwcode.test;
 import br.com.pwcode.functions.functions;
+
+import org.junit.*;
 
 import static org.junit.Assert.*;
 
@@ -15,7 +16,7 @@ public class testFunctions {
 
         String result = functions.simpleAddress("Miritiba 339");
 
-        assertEquals("{Miritiba, 339}", result);
+        assertEquals("{\"Miritiba\", \"339\"}", result);
     }
     @Test
     public void testBiggerAddress() {
@@ -23,23 +24,23 @@ public class testFunctions {
 
         String result = functions.simpleAddress("Quirino dos Santos 23 b");
 
-        assertEquals("{Quirino dos Santos, 23 b}", result);
+        assertEquals("{\"Quirino dos Santos\", \"23 b\"}", result);
     }
     @Test
-    public void testForeignAddressWithCommaAndNumber() {
+    public void testForeignAddressCommaAndNum() {
         functions functions = new functions();
 
         String result = functions.simpleAddress("4, Rue de la République");
 
-        assertEquals("{Rue de la République, 4}", result);
+        assertEquals("{\"Rue de la République\", \"4\"}", result);
     }
     @Test
-    public void testForeignAddressWithNumber() {
+    public void testForeignAddressNum() {
         functions functions = new functions();
 
         String result = functions.simpleAddress("100 Broadway Av");
 
-        assertEquals("{Broadway Av, 100}", result);
+        assertEquals("{\"Broadway Av\", \"100\"}", result);
     }
     @Test
     public void testForeignAddressWithComma() {
@@ -47,15 +48,15 @@ public class testFunctions {
 
         String result = functions.simpleAddress("Calle Sagasta, 26");
 
-        assertEquals("{Calle Sagasta, 26}", result);
+        assertEquals("{\"Calle Sagasta\", \"26\"}", result);
     }
     @Test
-    public void testForeignAddressWithNo() {
+    public void testForeignAddressNo() {
         functions functions = new functions();
 
         String result = functions.simpleAddress("Calle 44 No 1991");
 
-        assertEquals("{Calle 44, No 1991}", result);
+        assertEquals("{\"Calle 44\", \"No 1991\"}", result);
     }
     @Test
     public void testIsForeignAddress() {

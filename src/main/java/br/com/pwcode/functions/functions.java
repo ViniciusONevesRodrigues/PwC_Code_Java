@@ -21,7 +21,7 @@ public class functions {
             addressResponse = biggerAddress(listOfWords);
         }
 
-        return String.format("{%s, %s}", addressResponse.get(0), addressResponse.get(1));
+        return String.format("{\"%s\", \"%s\"}", addressResponse.get(0), addressResponse.get(1));
     }
 
     public List<String> biggerAddress(List<String> listOfWords) {
