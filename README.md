@@ -2,8 +2,11 @@
 
 ## Tecnologias usadas:
 linguagem: Java
+<br>
 Testes: JUnit
+<br>
 Interface: Swing
+<br>
 Convertor para .exe: Eclipse
 
 ## Funções Principais
@@ -52,7 +55,7 @@ bool: True se a palavra contiver um dígito numérico, False caso contrário.
 ## Como rodar:
 
 #### Primeira forma:
-Baixe o exe e clique no Address_Splitter.jar
+[Download da Versão 1.0.0](https://github.com/ViniciusONevesRodrigues/PwC_Code_Java/releases/tag/v1.0.0) e clique no Address_Splitter.jar
 
 #### Segunda forma:
 Baixe os arquivos, escolha uma IDE para rodar, baixe Java, rode o Address_Splitter.java
